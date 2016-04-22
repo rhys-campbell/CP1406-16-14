@@ -23,3 +23,9 @@ body {
     .rightEdge {
         display: none}}
 
+.Banner {
+}
+
+.BannerRight {
+    float: right;
+}

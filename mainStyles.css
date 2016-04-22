@@ -1,3 +1,25 @@
 .col-xs-12 {
     background-color: #2b542c;
 }
+
+
+body {
+    background-color: #1B242F;
+}
+.col-xs-4{
+    background-color: #ffffff;
+}
+
+.col-md-3{
+    background-color: #1B242F;
+    color: #ffffff;
+}
+
+@media (max-width: 1000px) and (min-width: 400px) {
+    .leftEdge {
+        display: none;
+    }
+
+    .rightEdge {
+        display: none}}
+

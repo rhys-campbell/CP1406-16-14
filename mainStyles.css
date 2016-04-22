@@ -15,15 +15,28 @@ body {
     color: #ffffff;
 }
 
+.col-md-6{
+
+}
+
 @media (max-width: 1000px) and (min-width: 400px) {
     .leftEdge {
         display: none;
     }
 
     .rightEdge {
-        display: none}}
+        display: none}
+
+    .BannerRight{
+        display: none;
+    }
+
+    header{
+        background-color: #ffffff;
+    }}
 
 .Banner {
+    background-color: #ffffff;
 }
 
 .BannerRight {

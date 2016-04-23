@@ -1,3 +1,25 @@
+@media (max-width: 1000px) {
+    .leftEdge {
+        display: none;
+    }
+
+    .rightEdge {
+        display: none}
+
+    .BannerRight{
+        display: none;
+    }
+
+    header{
+        background-color: #ffffff;
+    }}
+
+
+    .callToAction {
+    display: block;
+    }
+
+
 .col-xs-12 {
     background-color: #2b542c;
 }
@@ -16,24 +38,10 @@ body {
 }
 
 .col-md-6{
-
+    overflow: hidden;
+    background-color: #ffffff;
 }
 
-@media (max-width: 1000px) and (min-width: 400px) {
-    .leftEdge {
-        display: none;
-    }
-
-    .rightEdge {
-        display: none}
-
-    .BannerRight{
-        display: none;
-    }
-
-    header{
-        background-color: #ffffff;
-    }}
 
 .Banner {
     background-color: #ffffff;
@@ -42,3 +50,15 @@ body {
 .BannerRight {
     float: right;
 }
+
+.calltoaction  {
+
+}
+
+.Above {
+    position: absolute;
+    z-index: 1;
+    left: 0%;
+    top: 0;
+}
+

@@ -61,4 +61,13 @@ body {
     left: 0%;
     top: 0;
 }
-
+.container-fluid .row .col-xs-4.col-md-2 {
+	text-align: center;
+	font-style: oblique;
+	font-weight: bold;
+}
+.container-fluid .row .normalText {
+	text-align: left;
+	font-style: normal;
+	font-weight: normal;
+}

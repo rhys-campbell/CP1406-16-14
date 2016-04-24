@@ -25,8 +25,9 @@
     display: block;
 }
 
-.col-xs-12 {
-    background-color: #2b542c;
+
+.leftEdge .rightEdge {
+    background-color: #1B242F;
 }
 
 
@@ -77,9 +78,88 @@ body {
 
 h1 {
     text-align: center;
+    font-size: 25px;
 }
 
 h2 {
     text-align: left;
-    font-size: large;
+    font-size: 20px;
 }
+
+h3 {
+    font-size: 18px;
+}
+
+/* Calender */
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-family: sans-serif;
+}
+
+
+
+#calendar {
+    background: #e4e0e7;
+    box-shadow: 0 0 20px #878787;
+    height: 208px;
+    margin: 20px auto;
+    position: relative;
+    text-align: center;
+    width: 216px;
+}
+
+#month {
+    background: linear-gradient(#7b80de, #4a43c6);
+    color: white;
+    height: 30px;
+    line-height: 30px;
+    text-shadow: 0 -1px 0 #878787;
+    width: 216px;
+}
+
+#days {
+    background: linear-gradient(#f4f4f4, #ebebeb);
+}
+
+table.days {
+    color: #888888;
+    font-size: 11px;
+    width: 216px;
+}
+
+table.day td, table.days td {
+    width: 30px;
+}
+
+table.day td {
+    background: #f4f0f7;
+    color: #878787;
+    height: 29px;
+    box-shadow: 0 -1px 0 white;
+}
+
+table.day td.old-month {
+    color: #aaaaaa;
+}
+
+
+table.day #event {
+    border-bottom: 2px solid #99ccff;
+}
+
+#seven {
+    display: none;
+}
+
+
+body {
+    padding: 0 10px;
+}
+
+

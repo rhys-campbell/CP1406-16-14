@@ -203,9 +203,20 @@ body {
 /*footer*/
 /*Home footer + sponsor*/
 
+footer {
+    padding-top: 10px;
+    padding-bottom: 25px;
+}
+
 .sponsor {
     display: block;
-    padding: 5px;
     min-width: 100px;
     position: relative;
+    display: block;
+    margin: 0 auto;
+}
+
+.bottom-nav {
+    list-style: none;
+    text-align: center;
 }

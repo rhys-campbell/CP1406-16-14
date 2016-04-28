@@ -221,3 +221,9 @@ footer {
     text-align: center;
 }.col-md-10 {
 }
+.col-xs-4.col-md-2.leftEdge {
+	background-color: #1B242F;
+}
+.row .col-xs-4.col-md-2 h2 {
+	text-align: center;
+}

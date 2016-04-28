@@ -20,13 +20,10 @@
     }
 
 
-.row {
-    display: flex;
-}
-
-
 .callToAction {
     display: block;
+    overflow: hidden;
+    background-color: #ffffff;
 }
 
 
@@ -38,21 +35,11 @@
 body {
     background-color: #1B242F;
 }
-.col-xs-4{
-    background-color: #ffffff;
-}
 
-.col-md-3{
-    background-color: #1B242F;
-    color: #ffffff;
-}
 
-.col-md-6{
-    overflow: hidden;
-    background-color: #ffffff;
-}
 
-.col-md-2 {
+
+.contentColor {
     background-color: white;
 }
 
@@ -65,9 +52,7 @@ body {
     float: right;
 }
 
-.calltoaction  {
 
-}
 
 .Above {
     position: absolute;
@@ -219,11 +204,8 @@ footer {
 .bottom-nav {
     list-style: none;
     text-align: center;
-}.col-md-10 {
 }
-.col-xs-4.col-md-2.leftEdge {
-	background-color: #1B242F;
-}
-.row .col-xs-4.col-md-2 h2 {
+
+h2 {
 	text-align: center;
 }

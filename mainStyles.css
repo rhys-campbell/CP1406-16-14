@@ -39,8 +39,9 @@ body {
 
 
 
-.contentColor {
+.content {
     background-color: white;
+    display: block;
 }
 
 

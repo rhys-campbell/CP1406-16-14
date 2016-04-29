@@ -4,20 +4,27 @@
     }
 
     .rightEdge {
-        display: none}
+        display: none
+    }
 
-    .BannerRight{
+    .BannerRight {
         display: none;
     }
 
-    header{
+    header {
         background-color: #ffffff;
-    }}
+    }
 
+    body {
+        background-image: none;
+    }
+
+}
 
     .callToAction {
     display: block;
     }
+
 
 
 .callToAction {
@@ -100,9 +107,6 @@ h3 {
     padding: 0;
 }
 
-html {
-    font-family: sans-serif;
-}
 
 
 
@@ -159,9 +163,18 @@ table.day #event {
     display: none;
 }
 
+html, body {
+    height: 100%; width: 100%;
+    padding: 0; margin: 0;
+}
+
 
 body {
-    padding: 0 10px;
+    padding: 10px;
+    background-image: url("elkhorn-coral-589407.jpg");
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 /* Biography page specific */

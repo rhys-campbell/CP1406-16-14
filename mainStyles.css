@@ -226,3 +226,7 @@ footer {
 h2 {
 	text-align: center;
 }
+
+
+/*Success message - contact form */
+#success_message{ display: none;}

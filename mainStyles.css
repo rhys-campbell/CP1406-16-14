@@ -231,6 +231,7 @@ footer {
 h2 {
 	text-align: center;
 }
+
 .floatTextLeft {
 	display: table-column;
 	text-align: left;
@@ -260,3 +261,13 @@ h2 {
 	display: table-row;
 	width: 100%;
 }
+
+
+
+/*Success message - contact form */
+#success_message{ display: none;}
+
+/*Contact form*/
+.btn-primary {border-color: transparent;
+}
+

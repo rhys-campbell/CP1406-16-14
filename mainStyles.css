@@ -231,3 +231,32 @@ footer {
 h2 {
 	text-align: center;
 }
+.floatTextLeft {
+	display: table-column;
+	text-align: left;
+	float: left;	
+}
+
+.articleTitle {
+	font-size: x-large;
+	font-weight: bold;
+	font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;
+}
+
+.articleSubTitle {
+	font-weight: bold;
+}
+
+.floatTextRight {
+	display: table-column;
+	text-align: right;
+	float: right;
+}
+.table {
+	display: table;
+}
+
+.articleHeader {
+	display: table-row;
+	width: 100%;
+}

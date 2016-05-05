@@ -230,3 +230,7 @@ h2 {
 
 /*Success message - contact form */
 #success_message{ display: none;}
+
+/*Contact form*/
+.btn-primary {border-color: transparent;
+}

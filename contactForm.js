@@ -1,5 +1,6 @@
 /** Adapted from  https://codepen.io/jaycbrf/pen/iBszr by Cameron on 5/4/2016. */
 
+
 $(document).ready(function() {
     $('#contact_form').bootstrapValidator({
             feedbackIcons: {

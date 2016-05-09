@@ -3,24 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <title>Become A Member</title>
-    <link href="bootstrap.css" rel='stylesheet' type='text/css' />
+    <link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
     <!-- Custom Theme files -->
     <link href="mainStyles.css" rel='stylesheet' type='text/css' />
 </head>
 <body>
-<header>
-    <div class="container-fluid">
-        <!-- Stack the columns on mobile by making one full-width and the other half-width -->
+<div class="container-fluid">
+    <!--Left Edge-->
+    <div class="col-md-3 leftEdge"></div>
+    <div class="col-md-6 content">
+        <!--Banner-->
         <div class="row">
-            <div class="col-md-3"></div>
-            <div class="col-md-6 Banner"> <a href="index.html"><img class="BannerLeft" src="images/BannerHeader.jpg" alt="Barrier Reef Orchestra - Townsville"/></a>
-                <a href="index.html"><img class="BannerRight" src="images/BannerRight.png" alt="Our banner extention"/></a> </div>
-            <div class="col-md-3"></div>
+            <div class="col-md-12 Banner"><a href="index.html"><img class="BannerLeft" src="images/BannerHeader.jpg" alt="Barrier Reef Orchestra - Townsville"/></a>
+                <a href="index.html"><img class="BannerRight" src="images/BannerRight.png" alt="Our banner extention"/></a>
+            </div>
         </div>
-        <!-- Columns start at 50% wide on mobile and bump up to 33.3% wide on desktop -->
+        <!--Navigation Bar-->
         <div class="row">
-            <div class="col-md-3"></div>
-            <div class="col-md-6">
+            <div class="col-md-12">
                 <ul class="nav nav-pills">
                     <li role="presentation" class="active"><a href="index.html">Home</a></li>
                     <li role="presentation" class="active"><a href="news.html">News</a></li>
@@ -32,83 +32,167 @@
                     <li role="presentation" class="active"><a href="contact.html">Contact Us</a></li>
                 </ul>
             </div>
-            <div class="col-md-3"></div>
         </div>
-    </div>
-</header>
 
-<div class="container-fluid">
-    <div class="row">
-        <div class="col-md-3"></div>
-        <div class="col-md-6">
-            <h1>Make A Donation</h1>
-            <p>With a philanthropic gift of $200 or more (we'll leave that up to you), you can become an Orchestra Benefactor and be placed on our Benefactor roll for twelve months. This roll will be published in each concert program and on our website for twelve months. As a Benefactor you will also receive two free tickets to our next concert, be placed on the mailing list for our newsletter, and will be a guest at our annual Season's Launch function. Please complete the details below and mail to PO Box 576 Townsville 4810, make cheques payable to North Queensland Ensembles Inc. or you can fill out the below form, and pay by direct debit to BSB 034 222, Account No. 173922. Donations are tax deductible. For more information contact Simon McConnell on 0418776961 or email mcconnellgray@optusnet.com.au. Your support of the Orchestra will be greatly appreciated.</p>
-            <br>
-            <form>
-                I wish to become a Barrier Reef Orchestra benefactor and contribute: $
-                <input type="number" name="contribution"> <br>
-                Payment Method:
-                <input type="radio" name="payment" value="cheque"> Cheque
-                <input type="radio" name="payment" value="EFTPOS"> EFTPOS
-                <input type="radio" name="payment" value="cash"> Cash <br>
-                I wish to be placed on the Benefactor roll as:
-                <input type="text" name="name">
-                OR Remain Anonymous
-                <input type="checkbox"><br>
-                Name:
-                <input type="text" name="name"><br>
-                Mailing Address:
-                <input type="text" name="address"><br>
-                Email Address:
-                <input type="email" name="email"><br>
-                Phone:
-                <input type="tel" name="phone">
-                Mobile:
-                <input type="tel" name="mobile"><br>
-                <br>
-                <input type="submit" value=" Submit " id="submit"><br>
-            </form>
+        <div class="row">
+            <div class="col-md-12">
+                <h1>Make A Donation</h1>
+                <p>With a philanthropic gift of $200 or more (we'll leave that up to you), you can become an Orchestra Benefactor and be placed on our Benefactor roll for twelve months. This roll will be published in each concert program and on our website for twelve months. As a Benefactor you will also receive two free tickets to our next concert, be placed on the mailing list for our newsletter, and will be a guest at our annual Season's Launch function. Please complete the details below and mail to PO Box 576 Townsville 4810, make cheques payable to North Queensland Ensembles Inc. or you can fill out the below form, and pay by direct debit to BSB 034 222, Account No. 173922. Donations are tax deductible. For more information contact Simon McConnell on 0418776961 or email mcconnellgray@optusnet.com.au. Your support of the Orchestra will be greatly appreciated.</p>
+                <div class="container-fluid">
+                    <form class="well form-horizontal" action=" " method="post" id="member_form">
+                        <fieldset>
+                            <!--Form Title-->
+                            <legend>Become a Member Today!</legend>
+
+                            <!--Payment Amount-->
+                            <div class="form-group">
+                                <label class="col-md-4 control-label">
+                                    I wish to become a Barrier Reef Orchestra benefactor and contribute: $
+                                </label>
+                                <div class="col-md-4 inputGroupContainer">
+                                    <div class="input-group">
+                                        <span class="input-group-addon"></span>
+                                        <input name="amount" class="form-control" type="number">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!--Payment Method-->
+                            <div class="form-group">
+                                <label class="col-md-4 control-label">
+                                    Payment Method:
+                                </label>
+                                <div class="col-md-4 inputGroupContainer">
+                                    <div class="input-group">
+                                        <input type="radio" name="cheque_payment" value="cheque"> Cheque
+                                        <br>
+                                        <input type="radio" name="eftpos_payment" value="EFTPOS"> EFTPOS
+                                        <br>
+                                        <input type="radio" name="cash_payment" value="cash"> Cash
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!--Alias-->
+                            <div class="form-group">
+                                <label class="col-md-4 control-label">
+                                    I wish to be placed on the Benefactor roll as:
+                                </label>
+                                <div class="col-md-4 inputGroupContainer">
+                                    <div class="input-group">
+                                        <span class="input-group-addon"></span>
+                                        <input type="text" name="alias" class="form-control">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!--Name-->
+                            <div class="form-group">
+                                <label class="col-md-4 control-label">
+                                    Name:
+                                </label>
+                                <div class="col-md-4 inputGroupContainer">
+                                    <div class="input-group">
+                                        <span class="input-group-addon"></span>
+                                        <input type="text" name="name" class="form-control">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!--Mailing Address-->
+                            <div class="form-group">
+                                <label class="col-md-4 control-label">
+                                    Mailing Address:
+                                </label>
+                                <div class="col-md-4 inputGroupContainer">
+                                    <div class="input-group">
+                                        <span class="input-group-addon"></span>
+                                        <input type="text" name="address" class="form-control">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!--Email-->
+                            <div class="form-group">
+                                <label class="col-md-4 control-label">
+                                    Email Address:
+                                </label>
+                                <div class="col-md-4 inputGroupContainer">
+                                    <div class="input-group">
+                                        <span class="input-group-addon"></span>
+                                        <input type="email" name="email" class="form-control">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!--Phone-->
+                            <div class="form-group">
+                                <label class="col-md-4 control-label">
+                                    Phone:
+                                </label>
+                                <div class="col-md-4 inputGroupContainer">
+                                    <div class="input-group">
+                                        <span class="input-group-addon"></span>
+                                        <input type="tel" name="phone" class="form-control">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!--Mobile-->
+                            <div class="form-group">
+                                <label class="col-md-4 control-label">
+                                    Mobile:
+                                </label>
+                                <div class="col-md-4 inputGroupContainer">
+                                    <div class="input-group">
+                                        <span class="input-group-addon"></span>
+                                        <input type="tel" name="mobile" class="form-control">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!--Submit Button -->
+                            <div class="form-group">
+                                <label class="col-md-4 control-label"></label>
+                                <div class="col-md-4">
+                                    <button type="submit" class="btn btn-primary">Send<span class="glyphicon glyphicon-send"></span></button>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
         </div>
-        <div class="col-md-3"></div>
-    </div>
 
-    <div class="row">
-        <div class="col-md-3"></div>
-        <div class="col-md-6"></div>
-        <div class="col-md-3"></div>
+        <!-- Footer -->
+        <div class="modal-footer">
+            <div class="row">
+                <div class="col-md-6">
+                    <ul class="bottom-nav">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="news.html">News</a></li>
+                        <li><a href="events.html">Events</a></li>
+                        <li><a href="people.html">People</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <ul class="bottom-nav">
+                        <li><a href="member.html">Become a Member</a></li>
+                        <li><a href="gallery.html">Photo Gallery</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <p> © Copyright 2016 Barrier Reef Orchestra. All rights reserved. </p>
+                </div>
+                <div class="col-md-6"><a href="#" id="PageTop">Return to Top</a></div>
+            </div>
+        </div>
     </div>
 </div>
-
-<footer>
-    <div class="row">
-        <div class="col-md-3"></div>
-        <div class="col-md-2">
-            <ul class="bottom-nav">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="news.html">News</a></li>
-                <li><a href="Events.html">Events</a></li>
-                <li><a href="people.html">People</a></li>
-            </ul>
-        </div>
-        <div class="col-md-2">
-            <ul class="bottom-nav">
-                <li><a href="member.html">Become a Member</a></li>
-                <li><a href="gallery.html">Photo Gallery</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
-            </ul>
-        </div>
-        <div class="col-md-2"></div>
-        <div class="col-md-3"></div>
-    </div>
-
-    <div class="row">
-        <div class="col-md-3"></div>
-        <div class="col-md-2">© Copyright 2016 Barrier Reef Orchestra. All rights reserved.</div>
-        <div class="col-md-2"></div>
-        <div class="col-md-2"><a href="#" id="PageTop">Return to Top</a></div>
-        <div class="col-md-3"></div>
-    </div>
-</footer>
 </body>
 </html>

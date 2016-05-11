@@ -270,4 +270,7 @@ h2 {
 /*Contact form*/
 .btn-primary {border-color: transparent;
 }
-
+.dividerImage {
+	padding-top: 10px;
+	padding-bottom: 10px;
+}

@@ -7,28 +7,23 @@
     <!-- Custom Theme files -->
     <link href="mainStyles.css" rel='stylesheet' type='text/css' />
 </head>
-<body>
 
-<header>
-    <div class="container-fluid">
-        <!-- Stack the columns on mobile by making one full-width and the other half-width -->
+<body>
+<div class="container-fluid">
+    <!--Left Column-->
+    <div class="col-md-3 leftEdge"></div>
+    <div class="col-md-6 content">
+        <!--Banner-->
         <div class="row">
-            <div class="col-xs-4 col-md-3"></div>
-            <div class="col-xs-4 col-md-6 Banner"> <a href="index.html"><img class="BannerLeft" src="BannerHeader.jpg" alt="Barrier Reef Orchestra - Townsville"/></a>
-                <a href="index.html"><img class="BannerRight" src="BannerRight.png" alt="Our banner extention"/></a> </div>
-            <div class="col-xs-4 col-md-3"></div>
+            <div class="col-md-12 Banner "> <a href="index.html"><img class="BannerLeft" src="images/BannerHeader.jpg" alt="Barrier Reef Orchestra - Townsville"/></a>
+                <a href="index.html"><img class="BannerRight" src="images/BannerRight.png" alt="Our banner extention"/></a>
+            </div>
         </div>
 
-        <!-- Columns start at 50% wide on mobile and bump up to 33.3% wide on desktop -->
+        <!--Navigation Bar-->
         <div class="row">
-
-
-            <div class="col-xs-6 col-md-3">
-                Crap
-            </div>
-            <div class="col-xs-6 col-md-6">
+            <div class="col-md-12">
                 <ul class="nav nav-pills">
-                    <li role="presentation" class="active"><a href="index.html">Home</a></li>
                     <li role="presentation" class="active"><a href="news.html">News</a></li>
                     <li role="presentation" class="active"><a href="events.html">Events</a></li>
                     <li role="presentation" class="active"><a href="people.html">People</a></li>
@@ -38,66 +33,47 @@
                     <li role="presentation" class="active"><a href="contact.html">Contact Us</a></li>
                 </ul>
             </div>
-
-
-            <div class="col-xs-6 col-md-3">.col-xs-6 .col-md-3</div>
         </div>
 
+        <!--Page Content-->
+        <div class="row">
+            <div class="col-md-12">
+                <p>------------------------------------------Content------------------------------------------------</p>
+            </div>
+        </div>
 
+        <!--Footer-->
+        <div class="modal-footer">
+            <div class="row">
+                <div class="col-md-6">
+                    <ul class="bottom-nav">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="news.html">News</a></li>
+                        <li><a href="events.html">Events</a></li>
+                        <li><a href="people.html">People</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <ul class="bottom-nav">
+                        <li><a href="member.html">Become a Member</a></li>
+                        <li><a href="gallery.html">Photo Gallery</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <p> © Copyright 2016 Barrier Reef Orchestra. All rights reserved. </p>
+                </div>
+                <div class="col-md-6"><a href="#" id="PageTop">Return to Top</a></div>
+            </div>
+        </div>
     </div>
-</header>
 
-
-<div class="container-fluid">
-
-    <div class="row">
-        <div class="col-xs-4 col-md-3"> Left edge </div>
-        <div class="col-xs-4 col-md-2"> ------------Content-----------</div>
-        <div class="col-xs-4 col-md-2"> ------------Content-----------</div>
-        <div class="col-xs-4 col-md-2"> ------------Content-----------</div>
-        <div class="col-xs-4 col-md-2"> ------------ Hanging content?-----------</div>
-        <div class="col-xs-4 col-md-1"> Right Edge</div>
-    </div>
-
-    <div class="row">
-        <div class="col-xs-4 col-md-3"> Left edge </div>
-        <div class="col-xs-4 col-md-2"> ------------Content-----------</div>
-        <div class="col-xs-4 col-md-2"> ------------Content-----------</div>
-        <div class="col-xs-4 col-md-2"> ------------Content-----------</div>
-        <div class="col-xs-4 col-md-3"> Right Edge</div>
-    </div>
-
+    <!--Right Column-->
+    <div class="col-md-3 rightEdge"></div>
 </div>
-<footer>
-    <div class="row ">
-        <div class="col-xs-4 col-md-3"></div>
-        <div class="col-xs-4 col-md-2">
-            <ul class="bottom-nav">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="news.html">News</a></li>
-                <li><a href="Events.html">Events</a></li>
-                <li><a href="people.html">People</a></li>
-            </ul>
-        </div>
-        <div class="col-xs-4 col-md-2">
-            <ul class="bottom-nav">
-                <li><a href="member.html">Become a Member</a></li>
-                <li><a href="gallery.html">Photo Gallery</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
-            </ul>
-        </div>
-        <div class="col-xs-4 col-md-2"></div>
-        <div class="col-xs-4 col-md-3"></div>
-    </div>
-
-    <div class="row">
-        <div class="col-xs-4 col-md-3"></div>
-        <div class="col-xs-4 col-md-2">© Copyright 2016 Barrier Reef Orchestra. All rights reserved.</div>
-        <div class="col-xs-4 col-md-2"></div>
-        <div class="col-xs-4 col-md-2"><a href="#" id="PageTop">Return to Top</a></div>
-        <div class="col-xs-4 col-md-3"></div>
-    </div>
-</footer>
 </body>
 </html>

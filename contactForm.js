@@ -63,4 +63,26 @@ $(document).ready(function() {
         });
 });
 
+function validateForm() {
+    var f_name_check = document.forms["contact_form"]["first_name"].value;
+    var f_last_check = document.forms["contact_form"]["last_name"].value;
+    var email_check = document.forms["contact_form"]["email"].value;
+    var comment_check = document.forms["contact_form"]["comment"].value;
+    if (f_name_check == null || f_name_check == "") {
+        alert("First name must be filled out");
+        return false;
+    }
+    if (f_last_check == null || f_last_check == "") {
+        alert("Second name must be filled out");
+        return false;
+    }
+    if (email_check == null || email_check == "") {
+        alert("Email must be filled out");
+        return false;
+    }
+    if (comment_check == null || comment_check == "") {
+        alert("Comment must be filled out");
+        return false;
+    }
+}
 

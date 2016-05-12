@@ -1,0 +1,450 @@
+/** Base container **/
+.kalendae {
+    display: inline-block;zoom:1;*display:inline;
+    background:#eee;
+    padding:10px;
+    margin:5px;
+    border-radius:5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    font-size:11px;
+    font-family:'Helvetica Neue', 'Helvetica';
+    cursor:default;
+    position:relative;
+}
+
+/** Popup Container for Kalendae.Input **/
+.kalendae.k-floating {
+    position:absolute;
+    top:0;
+    left:0;
+    z-index:100000;
+    margin:0;
+    box-shadow:0 1px 3px rgba(0,0,0,0.75);
+    -moz-box-shadow:0 1px 3px rgba(0,0,0,0.75);
+    -webkit-box-shadow:0 1px 3px rgba(0,0,0,0.75);
+}
+
+/** Kalendae.Input's popup close button **/
+.kalendae .k-btn-close {
+    position:absolute;
+    top:-8px;
+    right:-8px;
+    width:16px;
+    height:16px;
+    background:white;
+    border:2px solid #ccc;
+    color:#999;
+    line-height:17px;
+    text-align:center;
+    font-size:13px;
+    border-radius:10px;
+    box-shadow:0 1px 3px rgba(0,0,0,0.75);
+    cursor:pointer;
+}
+.kalendae .k-btn-close:after {content:"\2716";}
+.kalendae .k-btn-close:hover {
+    color:#7EA0E2;
+    background:white;
+    border-color:#7EA0E2;
+}
+
+/** Month Container **/
+.kalendae .k-calendar {display: inline-block;zoom:1;*display:inline;width:155px;vertical-align:top;}
+
+/** Month Separator **/
+.kalendae .k-separator {display: inline-block;zoom:1;*display:inline;width:2px;vertical-align:top;background:#ddd;height:155px;margin:0px 10px;}
+
+/** Month Title Row **/
+.kalendae .k-title {text-align:center;white-space:nowrap;position:relative;height:18px;}
+.kalendae .k-caption {font-size:12px;line-height:18px;}
+
+
+/** Month and Year Buttons **/
+.kalendae .k-btn-previous-month,
+.kalendae .k-btn-next-month,
+.kalendae .k-btn-previous-year,
+.kalendae .k-btn-next-year {width:16px;height:16px;cursor:pointer;position:absolute;top:0;color:#777;font-size:20px;line-height:14px;}
+
+.kalendae .k-btn-previous-year {left:0;}
+.kalendae .k-btn-previous-month {left:16px;}
+.kalendae .k-btn-next-month {right:16px;}
+.kalendae .k-btn-next-year {right:0;}
+
+.kalendae .k-btn-previous-month:after {content:"\276E";}
+.kalendae .k-btn-next-month:after {content:"\276F";}
+
+.kalendae .k-btn-previous-year:after {content:"\276E\276E";}
+.kalendae .k-btn-next-year:after {content:"\276F\276F";}
+
+.kalendae .k-btn-previous-year,
+.kalendae .k-btn-next-year {letter-spacing:-4px;text-align:left;}
+
+.kalendae .k-btn-previous-month:hover,
+.kalendae .k-btn-next-month:hover {color:#7EA0E2;}
+
+.kalendae .k-btn-previous-year:hover,
+.kalendae .k-btn-next-year:hover {color:#6FDF81;}
+
+/** Remove extra buttons when calendar shows multiple months **/
+.kalendae .k-first-month .k-btn-next-month,
+.kalendae .k-middle-month .k-btn-next-month,
+.kalendae .k-middle-month .k-btn-previous-month,
+.kalendae .k-last-month .k-btn-previous-month,
+.kalendae .k-first-month .k-btn-next-year,
+.kalendae .k-middle-month .k-btn-next-year,
+.kalendae .k-middle-month .k-btn-previous-year,
+.kalendae .k-last-month .k-btn-previous-year {display:none;}
+
+/** Force specific width for month container contents **/
+.kalendae .k-title,
+.kalendae .k-header,
+.kalendae .k-days {
+    width:154px;
+    display:block;
+    overflow:hidden;
+}
+
+
+/** Hide unusable buttons **/
+.kalendae.k-disable-next-month-btn .k-btn-next-month,
+.kalendae.k-disable-previous-month-btn .k-btn-previous-month,
+.kalendae.k-disable-next-year-btn .k-btn-next-year,
+.kalendae.k-disable-previous-year-btn .k-btn-previous-year {
+    display:none;
+}
+
+
+/** Week columns and day cells **/
+.kalendae .k-header span,
+.kalendae .k-days span {
+    float:left;
+    margin:1px 1px;
+}
+
+.kalendae .k-header span {
+    text-align:center;
+    font-weight:bold;
+    width:20px;
+    padding:1px 0;
+    color:#666;
+}
+
+.kalendae .k-days span {
+    text-align:right;
+    width:13px;
+    height:1.1em;
+    line-height:1em;
+    padding:2px 3px 2px 2px;
+    border:1px solid transparent;
+    border-radius:3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    color:#999;
+}
+
+/** Today **/
+.kalendae .k-today {
+    text-decoration:underline;
+}
+
+/** Selected day, when outside the selectable area **/
+.kalendae .k-days span.k-selected {
+    border-color:#1072A5;
+    color:#1072A5;
+}
+
+/** Selected day, when inside the selectable area **/
+.kalendae .k-days span.k-selected.k-active {
+    background:#7EA0E2;
+    color:white;
+}
+
+/** Days between the start and end points on a range, outside of the selectable area **/
+.kalendae .k-days span.k-range {
+    background:none;
+    border-color:#6DD4FE;
+}
+
+/** Days between the start and end points on a range, inside of the selectable area **/
+.kalendae .k-days span.k-range.k-active {
+    background:#C4D4F1;
+    border-color:#19AEFE;
+    color:#333;
+}
+
+/** Selectable but not selected day  **/
+.kalendae .k-days span.k-active {
+    border-color:#ddd;
+    background-color:#fff;
+    cursor:pointer;
+    color:#333;
+}
+
+/** Selectable day, hovered **/
+.kalendae .k-days span.k-active:hover {
+    border-color:#666;
+}
+
+/** Days outside of the month view (before the first day of the month, after the last day of the month) **/
+.kalendae .k-days span.k-out-of-month {color:#ddd;}
+
+
+
+/*-------------------------------------IE8 ONLY CODE BELOW THIS LINE--------------------------------------------*/
+
+.kalendae.ie8.k-floating {
+    border:1px solid #ccc;
+}
+
+.kalendae.ie8 .k-btn-close {
+    width:20px;
+    height:20px;
+    border:none;
+    background:url('close.png') no-repeat top left;
+}
+.kalendae.ie8 .k-btn-close:after {display:none;}
+
+.kalendae.ie8 .k-btn-previous-month,
+.kalendae.ie8 .k-btn-next-month,
+.kalendae.ie8 .k-btn-previous-year,
+.kalendae.ie8 .k-btn-next-year {width:16px;height:16px;cursor:pointer;background:#777 url('arrows.png') no-repeat center left;position:absolute;top:0;}
+
+.kalendae.ie8 .k-btn-next-month,
+.kalendae.ie8 .k-btn-next-year {background-position:center right;}
+
+.kalendae.ie8 .k-btn-previous-month:hover,
+.kalendae.ie8 .k-btn-next-month:hover {background-color:#7EA0E2;}
+
+.kalendae.ie8 .k-btn-previous-year,
+.kalendae.ie8 .k-btn-next-year {background-color:#333;}
+
+.kalendae.ie8 .k-btn-previous-year:hover,
+.kalendae.ie8 .k-btn-next-year:hover {background-color:#6FDF81;}
+
+.kalendae.ie8 .k-btn-previous-month:after,
+.kalendae.ie8 .k-btn-next-month:after,
+.kalendae.ie8 .k-btn-previous-year:after,
+.kalendae.ie8 .k-btn-next-year:after {display:none;}
+
+
+/*!------------------------------------------
+ * Kalendae Metal Skin
+ * ------------------------------------------
+ * Author:
+ * Anas Nakawa - @anasnakawa - anas.nakawa@gmail.com
+ * Credits:
+ * Kalendae plugin: Jarvis Badgley - chiper@chipersoft.com
+ * Skin inspiration: Orman Clark - http://www.premiumpixels.com
+ * License:
+ * MIT License - http://opensource.org/licenses/mit-license.php
+ * ------------------------------------------
+ */
+.kalendae {
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    -o-border-radius: 0;
+    border-radius: 0;
+    padding: 0;
+    border-bottom: 1px solid #bbbbbb;
+    -webkit-box-shadow: 0 5px 0 -4px #f7f7f7, 0 5px 0 -3px #bbbbbb, 0 11px 0 -8px #f7f7f7, 0 11px 0 -7px #bbbbbb, 0 0 15px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0 5px 0 -4px #f7f7f7, 0 5px 0 -3px #bbbbbb, 0 11px 0 -8px #f7f7f7, 0 11px 0 -7px #bbbbbb, 0 0 15px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 5px 0 -4px #f7f7f7, 0 5px 0 -3px #bbbbbb, 0 11px 0 -8px #f7f7f7, 0 11px 0 -7px #bbbbbb, 0 0 15px rgba(0, 0, 0, 0.3);
+    background-color: transparent;
+}
+.kalendae .k-calendar {
+    width: 210px;
+}
+.kalendae .k-title,
+.kalendae .k-header,
+.kalendae .k-days {
+    width: auto;
+}
+.kalendae .k-title {
+    background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzM5MzkzOSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzIwMjAyMCIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+    background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #393939), color-stop(100%, #202020));
+    background: -webkit-linear-gradient(#393939, #202020);
+    background: -moz-linear-gradient(#393939, #202020);
+    background: -o-linear-gradient(#393939, #202020);
+    background: linear-gradient(#393939, #202020);
+    -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.3) inset, 0 1px 1px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.3) inset, 0 1px 1px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.3) inset, 0 1px 1px rgba(0, 0, 0, 0.3);
+    -webkit-border-radius: 3px 3px 0 0;
+    -moz-border-radius: 3px 3px 0 0;
+    -ms-border-radius: 3px 3px 0 0;
+    -o-border-radius: 3px 3px 0 0;
+    border-radius: 3px 3px 0 0;
+    background-color: transparent;
+    border: 1px solid black;
+    color: #e0e0e0;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.9);
+    padding: 5px;
+    line-height: 25px;
+    height: 25px;
+}
+.kalendae .k-title .k-caption {
+    font-weight: bold;
+}
+.kalendae .k-title a {
+    background-image: url('data:"image/png";base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAcFJREFUeNrslr9Kw1AUxnuvCRSMEGKldUqhYAlmcOrkIvgc2e2QQl7BsbSL4HMUHOrkA3QRB5cuSRabFwiihdRzIEJo7r9kKWguHEIufF/OPZyb3yG73a51yEVbB17a/gYhRCrar5qKhudz8ArwEjAhniGcCl4sjdwHy1AMXJ7nXS6Xy2/XdT/gdQJxVEej4sOsgG3bx47j6IvFohcEwb2maU+wPRAdn6VJ0/RC5iPsARAQ3/dPwOB2OBy+wFZb2tUFTZIkjzIfpSaEEupQyk4URcrtjpr5fG7KfKjidVlTSm/6/f5nhSu2DsPwTubDTMCyrK9ckMFjCvf8CkQr0QdZms1m8yr1YXU0lOgM4h1ipHpzWBoVH1Lnr/an/oTk39OwSaCZB1QTcHKumxW8WZryHuuvVljI7wnyHLmOfK+p4fpoghMMAKMPgNHr8XhsIFKR+ZJTlzQ4E8BzyvPhJdBGbs9ms3NEqGLJmRqcCWAOOOX5MBNAXmdZ1gF0qn6cq8GZoNvt6pWaEHmN3EZ+qybA0+BMIPKhAsMV8hs5nvO8ZRjGVpJESRPH8ZvQR9LRv+Ud5Vzv1dXwfJp5oJkHfgQYADiTnvJq+mHGAAAAAElFTkSuQmCC');
+    background-repeat: no-repeat;
+    margin-top: 9px;
+}
+.kalendae .k-title a:after {
+    content: none;
+}
+.kalendae .k-title a.k-btn-previous-year, .kalendae .k-title a.k-btn-previous-month {
+    margin-left: 5px;
+}
+.kalendae .k-title a.k-btn-next-year, .kalendae .k-title a.k-btn-next-month {
+    margin-right: 5px;
+}
+.kalendae .k-title a.k-btn-previous-year {
+    background-position: -16px -16px;
+}
+.kalendae .k-title a.k-btn-previous-month {
+    background-position: 0 -16px;
+}
+.kalendae .k-title a.k-btn-next-year {
+    background-position: -16px 0;
+}
+.kalendae .k-title a.k-btn-next-month {
+    background-position: 0 0;
+}
+.kalendae .k-header {
+    background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzIyMjIyMiIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzU1NTU1NSIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+    background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #222222), color-stop(100%, #555555));
+    background: -webkit-linear-gradient(#222222, #555555);
+    background: -moz-linear-gradient(#222222, #555555);
+    background: -o-linear-gradient(#222222, #555555);
+    background: linear-gradient(#222222, #555555);
+    color: #dadada;
+    text-shadow: 0 1px 0 black;
+}
+.kalendae .k-header span {
+    color: #dadada;
+    width: 30px;
+    line-height: 20px;
+    text-transform: uppercase;
+}
+.kalendae .k-header span,
+.kalendae .k-days span {
+    margin: 0;
+}
+.kalendae .k-calendar .k-days span {
+    background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+    background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffffff), color-stop(100%, #ffffff));
+    background: -webkit-linear-gradient(#ffffff, #ffffff);
+    background: -moz-linear-gradient(#ffffff, #ffffff);
+    background: -o-linear-gradient(#ffffff, #ffffff);
+    background: linear-gradient(#ffffff, #ffffff);
+    -webkit-box-shadow: 1px 1px 0 white inset;
+    -moz-box-shadow: 1px 1px 0 white inset;
+    box-shadow: 1px 1px 0 white inset;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    -o-border-radius: 0;
+    border-radius: 0;
+    color: lighteb(#666666, 20);
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+    border-bottom: 1px solid #eeeeee;
+    border-left: 1px solid #eeeeee;
+    width: 23px;
+    height: 23px;
+    line-height: 23px;
+    padding-top: 2px;
+    text-align: center;
+}
+.kalendae .k-calendar .k-days span.k-active, .kalendae .k-calendar .k-days span.k-out-of-month {
+    background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2U3ZTdlNyIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2Q5ZDlkOSIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+    background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #e7e7e7), color-stop(100%, #d9d9d9));
+    background: -webkit-linear-gradient(#e7e7e7, #d9d9d9);
+    background: -moz-linear-gradient(#e7e7e7, #d9d9d9);
+    background: -o-linear-gradient(#e7e7e7, #d9d9d9);
+    background: linear-gradient(#e7e7e7, #d9d9d9);
+    color: #666666;
+    border-top-color: transparent;
+    border-right-color: transparent;
+    border-bottom: 1px solid #bbbbbb;
+    border-left: 1px solid #bbbbbb;
+}
+.kalendae .k-calendar .k-days span.k-active:hover, .kalendae .k-calendar .k-days span.k-out-of-month:hover {
+    border-color: #888888;
+}
+.kalendae .k-calendar .k-days span.k-active.k-selected, .kalendae .k-calendar .k-days span.k-selected.k-out-of-month, .kalendae .k-calendar .k-days span.k-active.k-range, .kalendae .k-calendar .k-days span.k-range.k-out-of-month {
+    -webkit-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3) inset;
+    -moz-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3) inset;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3) inset;
+    background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzE0OGFkMyIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzVkYjhmMCIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+    background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #148ad3), color-stop(100%, #5db8f0));
+    background: -webkit-linear-gradient(#148ad3, #5db8f0);
+    background: -moz-linear-gradient(#148ad3, #5db8f0);
+    background: -o-linear-gradient(#148ad3, #5db8f0);
+    background: linear-gradient(#148ad3, #5db8f0);
+    background-color: #148ad3;
+    border-color: #0b4d76;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.7);
+    color: white;
+}
+.kalendae .k-calendar .k-days span.k-active.k-selected.k-out-of-month, .kalendae .k-calendar .k-days span.k-selected.k-out-of-month, .kalendae .k-calendar .k-days span.k-active.k-range.k-out-of-month, .kalendae .k-calendar .k-days span.k-range.k-out-of-month {
+    background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2Y1ZjVmNSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2VjZWNlYyIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+    background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #f5f5f5), color-stop(100%, #ececec));
+    background: -webkit-linear-gradient(#f5f5f5, #ececec);
+    background: -moz-linear-gradient(#f5f5f5, #ececec);
+    background: -o-linear-gradient(#f5f5f5, #ececec);
+    background: linear-gradient(#f5f5f5, #ececec);
+    color: #666666;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+    background-color: whitesmoke;
+    border-color: #bbbbbb;
+}
+.kalendae .k-calendar .k-days span.k-out-of-month {
+    background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2Y1ZjVmNSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2VjZWNlYyIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+    background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #f5f5f5), color-stop(100%, #ececec));
+    background: -webkit-linear-gradient(#f5f5f5, #ececec);
+    background: -moz-linear-gradient(#f5f5f5, #ececec);
+    background: -o-linear-gradient(#f5f5f5, #ececec);
+    background: linear-gradient(#f5f5f5, #ececec);
+    border-bottom: 1px solid #bbbbbb;
+    border-left: 1px solid #bbbbbb;
+    color: #666666;
+}
+
+.kalendae .k-calendar.k-first-month .k-title {
+    -webkit-border-radius: 3px 0 0 0;
+    -moz-border-radius: 3px 0 0 0;
+    -ms-border-radius: 3px 0 0 0;
+    -o-border-radius: 3px 0 0 0;
+    border-radius: 3px 0 0 0;
+}
+.kalendae .k-calendar.k-middle-month .k-title {
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    -o-border-radius: 0;
+    border-radius: 0;
+}
+.kalendae .k-calendar.k-last-month .k-title {
+    -webkit-border-radius: 0 3px 0 0;
+    -moz-border-radius: 0 3px 0 0;
+    -ms-border-radius: 0 3px 0 0;
+    -o-border-radius: 0 3px 0 0;
+    border-radius: 0 3px 0 0;
+}
+
+.kalendae .k-separator {
+    background: none;
+    height: 233px;
+    margin: 0;
+    width: 0;
+}
+
+
+#wrap {
+    display: block;
+    margin: 50px auto;
+    width: 210px;
+}

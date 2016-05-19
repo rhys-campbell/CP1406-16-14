@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Barrier Reef Orchestra - Home</title>
+    <meta charset="UTF-8">
+    <title>Cams play</title>
+    <link href="bootstrap.css" rel='stylesheet' type='text/css' />
+    <!-- Calender Theme files -->
+    <link href="auto-cal.css" rel='stylesheet' type='text/css' />
+    <!-- Custom Theme files -->
+    <link href="mainStyles.css" rel='stylesheet' type='text/css' />
+</head>
+
+<body>
+<div class = container-fluid>
+    <div class = " col-md-3 leftEdge">
+        <!-- This is the left column -->
+    </div>
+    <div class = "col-md-6 content">
+            <div class = "row">
+                <div class="col-md-12">
+                    <form>
+                        <p>
+                        <fieldset>
+                            <legend>Cam's play<abbr title="This field is mandatory">*</abbr></legend>
+                            <label for="r1">Would you like to be on our mailing list?</label>
+                            <input type="radio" required name="title" id="r1" value="Yes" ><label for="r1">Yes </label>
+                            <input type="radio" required name="title" id="r2" value="No"><label for="r2">No</label>
+                        </fieldset>
+                        </p>
+                        <p>
+                            <label for="n1">What is your first name?</label>
+                            <input type="text" min="2" max="30"  id="n1" required name="first_name">
+                        </p>
+                        <label for="n1">What is your last name?</label>
+
+                        <input type="text" min="2" max="30"  id="n2"  required ="last_name">
+                        </p>
+                        <p>
+                            <label for="t2">What's your e-mail?</label>
+                            <input type="email" id="t2" name="email">
+                        </p>
+                        <p>
+                            <label for="t3">Leave a short message: </label>
+                            <textarea id="t3" name="msg"  required ="140" rows="5"></textarea>
+                        </p>
+                        <p>
+                            <button>Submit</button>
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class = "col-md-3 rightEdge">
+        <!-- This is the right column -->
+    </div>
+</div>
+<script src="auto-kal.js"></script>
+</body>
+</html>

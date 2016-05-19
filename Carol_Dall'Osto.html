@@ -8,26 +8,21 @@
     <link href="mainStyles.css" rel='stylesheet' type='text/css' />
 </head>
 <body>
-
-<header>
-    <div class="container-fluid">
-        <!-- Stack the columns on mobile by making one full-width and the other half-width -->
+<div class = "container-fluid">
+    <div  class = " col-md-3 leftEdge">
+        <!-- This is the left column -->
+    </div>
+    <div  class = "col-md-6 content">
+        <!-- Banner -->
         <div class="row">
-            <div class="col-xs-4 col-md-3 leftEdge"></div>
-            <!-- Not sure how to remove small white line from banner, i think its a padding issue. Images below; -->
-            <div class="col-xs-4 col-md-6 Banner"> <a href="index.html"><img class="BannerLeft" src="BannerHeader.jpg" alt="Our banner"/></a>
-                <a href="index.html"><img class="BannerRight" src="BannerRight.png" alt="Our banner"/></a> </div>
-            <div class="col-xs-4 col-md-3 rightEdge"></div>
+            <div class="col-md-12 Banner"> <a href="index.html"><img class="BannerLeft" src="images/BannerHeader.jpg" alt="Barrier Reef Orchestra - Townsville"/></a>
+                <a href="index.html"><img class="BannerRight" src="images/BannerRight.png" alt="Our banner extention"/></a>
+            </div>
         </div>
-
-        <!-- Columns start at 50% wide on mobile and bump up to 33.3% wide on desktop -->
-        <div class="row">
-
-
-            <div class="col-xs-6 col-md-3 leftEdge"></div>
-            <div class="col-xs-6 col-md-6">
-                <ul class="nav nav-pills">
-                    <li role="presentation" class="active"><a href="index.html">Home</a></li>
+        <!-- Navigation bar -->
+        <div class = "row">
+            <div class=" col-md-12">
+                <ul class="nav nav-pills ">
                     <li role="presentation" class="active"><a href="news.html">News</a></li>
                     <li role="presentation" class="active"><a href="events.html">Events</a></li>
                     <li role="presentation" class="active"><a href="people.html">People</a></li>
@@ -37,79 +32,65 @@
                     <li role="presentation" class="active"><a href="contact.html">Contact Us</a></li>
                 </ul>
             </div>
-            <div class="col-xs-6 col-md-3 rightEdge"></div>
         </div>
-
+        <!--Breadcrumbs-->
         <div class = "row">
-            <div class="col-xs-6 col-md-3 leftEdge"></div>
-            <div class="col-xs-6 col-md-6">
+            <div class=" col-md-12">
                 <ol class="breadcrumb">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="people.html">People</a></li>
                     <li class="active">Carol Dall'Osto</li>
                 </ol>
             </div>
-            <div class="col-xs-6 col-md-3 rightEdge"></div>
+        </div>
+
+        <div class = "row">
+            <div class="col-md-6"><h1> Carol Dall'Osto's Bio</h1>
+                <p class = "normal">   Carol has been a leading figure in music performances in Townsville for many years despite living in
+                    Ingham until the early 2000s when she moved to Townsville. Carol is a piano teacher, accompanist,
+                    and musical director of the Australian Concerto and Vocal Competition which she has led since 1991.   </p>
+
+                <p class = "normal"> She was involved with the others in the formation of the Barrier Reef Orchestra, and was chairperson
+                    of the North Queensland Ensembles Committee (the parent organization for the Orchestra), a position she held until 2003.  </p>
+
+            </div>
+
+            <div class=" col-md-6">
+                <img class="bioImg img-responsive" src="images/carol.jpg">
+            </div>
+        </div>
+
+        <div class="modal-footer" >
+            <div class="row ">
+                <div class=" col-md-6 ">
+                    <ul class="bottom-nav">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="news.html">News</a></li>
+                        <li><a href="events.html">Events</a></li>
+                        <li><a href="people.html">People</a></li>
+                    </ul>
+                </div>
+                <div class=" col-md-6 ">
+                    <ul class="bottom-nav">
+                        <li><a href="member.html">Become a Member</a></li>
+                        <li><a href="gallery.html">Photo Gallery</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class=" col-md-6 ">
+                    <p> © Copyright 2016 Barrier Reef Orchestra. All rights reserved. </p>
+                </div>
+                <div class=" col-md-6 "><a href="#" id="PageTop">Return to Top</a></div>
+            </div>
         </div>
     </div>
-
-</header>
-
-<div class = "container-fluid ">
-    <div class = "row">
-        <div class="col-xs-6 col-md-3 leftEdge"></div>
-        <div class="col-xs-6 col-md-3 fill"><h1>Carol Dall'Osto</h1>
-
-            <p class = "normal">   Carol has been a leading figure in music performances in Townsville for many years despite living in
-
-                Ingham until the early 2000s when she moved to Townsville. Carol is a piano teacher, accompanist,
-
-                and musical director of the Australian Concerto and Vocal Competition which she has led since 1991.   </p>
-
-            <p class = "normal"> She was involved with the others in the formation of the Barrier Reef Orchestra, and was chairperson
-
-                of the North Queensland Ensembles Committee (the parent organization for the Orchestra), a position she held until 2003.  </p>
-
-
-
-            <p > <a href= "">Visit Carol's website</a></p>
-
-        </div>
-        <div class="col-xs-6 col-md-3 fill"> <img class = "bioImg img-responsive" src="">           </div>
-        <div class="col-xs-6 col-md-3 rightEdge"></div>
+    <div  class = " col-md-3 rightEdge">
+        <!-- This is the right column -->
     </div>
 </div>
-
-<footer>
-
-    <div class="row ">
-        <div class="col-xs-4 col-md-3"></div>
-        <div class="col-xs-4 col-md-2">
-            <ul class="bottom-nav">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="news.html">News</a></li>
-                <li><a href="people.html">People</a></li>
-                <li><a href="events.html">Events</a></li>
-            </ul>
-        </div>
-        <div class="col-xs-4 col-md-2">
-            <ul class="bottom-nav">
-                <li><a href="member.html">Become a Member</a></li>
-                <li><a href="gallery.html">Photo Gallery</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
-            </ul>
-        </div>
-        <div class="col-xs-4 col-md-2">        </div>
-        <div class="col-xs-4 col-md-3"></div>
-    </div>
-
-    <div class="row">
-        <div class="col-xs-4 col-md-3"></div>
-        <div class="col-xs-4 col-md-2">© Copyright 2016 Barrier Reef Orchestra. All rights reserved.</div>
-        <div class="col-xs-4 col-md-2"></div>
-        <div class="col-xs-4 col-md-2"><a href="#" id="PageTop">Return to Top</a></div>
-        <div class="col-xs-4 col-md-3"></div>
-    </div>
 </body>
 </html>

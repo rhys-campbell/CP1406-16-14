@@ -357,3 +357,18 @@ div.panel.show {
     margin: 0px auto;
     display:block
 }
+
+.carousel-inner .item {
+    height: 640px;
+    background-color: black;
+}
+
+.carousel-inner img {
+    margin: auto;
+}
+
+.carousel-inner .item img {
+    position:relative;
+    top:50%;
+    transform: translateY(-50%);
+}

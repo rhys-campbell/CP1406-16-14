@@ -56,113 +56,67 @@
             </div>
         </div>
 
-        <div class = "row">
-            <div class = "col-md-12">
-                <div class="container-fluid">
-                    <form class="well form-horizontal" action="" onsubmit="return validateForm()"  method="post"  id="contact_form">
+        <div class="row">
+            <div class = col-md-2>
+            </div>
+            <div class="container-fluid">
+                <div class = col-md-8>
+                    <form class="well form-horizontal" action="" onsubmit="return validate()"  method="post">
                         <fieldset>
-
                             <!-- Form Name -->
                             <legend>Send us an email!</legend>
-
-                            <!-- Text input for first name-->
-
                             <div class="form-group">
-                                <label class="col-md-4 control-label">First Name</label>
-                                <div class="col-md-4 inputGroupContainer">
-                                    <div class="input-group">
+                                <div class="col-md-12 inputGroupContainer">
+                                    <div class=" col-md-12 input-group">
+                                        <label for="first_name">First name:</label>
                                         <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                                        <input  name="first_name" placeholder="First Name" class="form-control"  type="text">
+                                        <input type="text" name="first_name" placeholder="First Name" id="first_name" required data-required-message="First name is required.">
                                     </div>
                                 </div>
                             </div>
-
-                            <!-- Text input for last name-->
-
                             <div class="form-group">
-                                <label class="col-md-4 control-label" >Last Name</label>
-                                <div class="col-md-4 inputGroupContainer">
-                                    <div class="input-group">
+                                <div class="col-md-12 inputGroupContainer">
+                                    <div class="col-md-12 input-group">
+                                        <label for="last_name">Last name:</label>
                                         <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                                        <input name="last_name" placeholder="Last Name" class="form-control"  type="text">
+                                        <input type="text" name="last_name" placeholder="Last Name" id="last_name" required data-required-message="Last name is required.">
                                     </div>
                                 </div>
                             </div>
-
-                            <!-- Text input for email-->
                             <div class="form-group">
-                                <label class="col-md-4 control-label">E-Mail</label>
-                                <div class="col-md-4 inputGroupContainer">
-                                    <div class="input-group">
+                                <div class="col-md-12 inputGroupContainer">
+                                    <div class="col-md-12 input-group">
+                                        <label for="email">Contact Email:</label>
                                         <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
-                                        <input name="email" placeholder="E-Mail Address" class="form-control"  type="text">
+                                        <input type="email" name="email" placeholder="Your contact email" id="email" required data-required-message="Email is required." data-type-message="You must provide a valid email address.">
                                     </div>
                                 </div>
                             </div>
-
-
-                            <!-- Text area for comment -->
-
                             <div class="form-group">
-                                <label class="col-md-4 control-label">Message</label>
-                                <div class="col-md-4 inputGroupContainer">
-                                    <div class="input-group">
+                                <div class="col-md-12 inputGroupContainer">
+                                    <div class="col-md-12 input-group">
+                                        <label for="comment">Message</label>
                                         <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
-                                        <textarea class="form-control" name="comment" placeholder="For us to read!"></textarea>
+                                        <textarea class="form-control" name="comment" id="comment" placeholder="For us to read!"  required data-required-message="A comment is required." data-type-message="You must provide a comment to be sent in the email."></textarea>
                                     </div>
                                 </div>
                             </div>
-
-                            <!-- Success message -->
-                            <div class="alert alert-success" role="alert" id="success_message">Success <i class="glyphicon glyphicon-thumbs-up"></i> Thanks for contacting us. If required we will get back to you shortly.</div>
-
-                            <!-- Button -->
                             <div class="form-group">
                                 <label class="col-md-4 control-label"></label>
                                 <div class="col-md-4">
-                                    <input type="submit" class="btn btn-primary" ></span></input>
+                                    <input type="submit" class="btn btn-primary">
                                 </div>
                             </div>
                         </fieldset>
                     </form>
                 </div>
             </div>
-
-            <div class="row">
-                <div class = col-md-12>
-                    <form class="well form-horizontal" action="" onsubmit="return validate()"  method="post">
-
-                        <!-- Form Name -->
-                        <legend>Send us an email!</legend>
-                        <div class="form-group">
-                            <div class="col-md-4 inputGroupContainer">
-                                <div class="input-group">
-                                    <label for="name">Name:</label>
-                                    <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                                    <input type="text" name="name" id="name" required data-required-message="Name is required.">
-                                </div>
-                            </div>
-                        </div>
-                            <div class="form-group">
-                                <div class="col-md-4 inputGroupContainer">
-                                    <div class="input-group">
-                                        <label for="email">Email:</label>
-                                        <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
-                                        <input type="email" name="email" id="email" required data-required-message="Email is required." data-type-message="You must provide a valid email address.">
-                                    </div>
-                                </div>
-                            </div>
-                        <div>
-                            <button>Submit</button>
-                        </div>
-
-                    </form>
-
-                </div>
+            <div class = col-md-2>
             </div>
+        </div>
 
             <script src="js/validate.js"></script>
-        </div>
+
 
 
         <!-- Footer -->

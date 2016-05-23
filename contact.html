@@ -6,6 +6,9 @@
     <link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
     <!-- Custom Theme files -->
     <link href="mainStyles.css" rel='stylesheet' type='text/css' />
+    <link href="js/jquery-1.9.1.js" rel="script" />
+    <link href="js/validate.js" rel="script" />
+
 </head>
 <body>
 
@@ -120,13 +123,45 @@
                                     <input type="submit" class="btn btn-primary" ></span></input>
                                 </div>
                             </div>
-
                         </fieldset>
                     </form>
                 </div>
             </div>
 
+            <div class="row">
+                <div class = col-md-12>
+                    <form class="well form-horizontal" action="" onsubmit="return validate()"  method="post">
 
+                        <!-- Form Name -->
+                        <legend>Send us an email!</legend>
+                        <div class="form-group">
+                            <div class="col-md-4 inputGroupContainer">
+                                <div class="input-group">
+                                    <label for="name">Name:</label>
+                                    <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                                    <input type="text" name="name" id="name" required data-required-message="Name is required.">
+                                </div>
+                            </div>
+                        </div>
+                            <div class="form-group">
+                                <div class="col-md-4 inputGroupContainer">
+                                    <div class="input-group">
+                                        <label for="email">Email:</label>
+                                        <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+                                        <input type="email" name="email" id="email" required data-required-message="Email is required." data-type-message="You must provide a valid email address.">
+                                    </div>
+                                </div>
+                            </div>
+                        <div>
+                            <button>Submit</button>
+                        </div>
+
+                    </form>
+
+                </div>
+            </div>
+
+            <script src="js/validate.js"></script>
         </div>
 
 
@@ -171,7 +206,7 @@
 
 
 
-<script src="contactForm.js"></script>
+<script src="js/validate.js"></script>
 
 </body>
 </html>

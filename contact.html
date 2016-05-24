@@ -57,18 +57,18 @@
         </div>
 
         <div class="row">
-            <div class = col-md-2>
-            </div>
             <div class="container-fluid">
-                <div class = col-md-8>
+                <div class = col-md-12>
                     <form class="well form-horizontal" action="" onsubmit="return validate()"  method="post">
                         <fieldset>
                             <!-- Form Name -->
                             <legend>Send us an email!</legend>
                             <div class="form-group">
                                 <div class="col-md-12 inputGroupContainer">
-                                    <div class=" col-md-12 input-group">
+                                    <div class = "col-md-2">
                                         <label for="first_name">First name:</label>
+                                    </div>
+                                    <div class=" col-md-8 input-group">
                                         <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
                                         <input type="text" name="first_name" placeholder="First Name" id="first_name" required data-required-message="First name is required.">
                                     </div>
@@ -76,8 +76,11 @@
                             </div>
                             <div class="form-group">
                                 <div class="col-md-12 inputGroupContainer">
-                                    <div class="col-md-12 input-group">
+                                    <div class = "col-md-2">
                                         <label for="last_name">Last name:</label>
+                                    </div>
+                                    <div class="col-md-8 input-group">
+
                                         <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
                                         <input type="text" name="last_name" placeholder="Last Name" id="last_name" required data-required-message="Last name is required.">
                                     </div>
@@ -85,8 +88,11 @@
                             </div>
                             <div class="form-group">
                                 <div class="col-md-12 inputGroupContainer">
-                                    <div class="col-md-12 input-group">
-                                        <label for="email">Contact Email:</label>
+                                    <div class = "col-md-2">
+                                        <label for="email">Email:</label>
+                                    </div>
+                                    <div class="col-md-8 input-group">
+
                                         <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
                                         <input type="email" name="email" placeholder="Your contact email" id="email" required data-required-message="Email is required." data-type-message="You must provide a valid email address.">
                                     </div>
@@ -94,8 +100,10 @@
                             </div>
                             <div class="form-group">
                                 <div class="col-md-12 inputGroupContainer">
-                                    <div class="col-md-12 input-group">
-                                        <label for="comment">Message</label>
+                                    <div class="col-md-2">
+                                        <label for="comment">Message:</label>
+                                    </div>
+                                    <div class="col-md-8 input-group">
                                         <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
                                         <textarea class="form-control" name="comment" id="comment" placeholder="For us to read!"  required data-required-message="A comment is required." data-type-message="You must provide a comment to be sent in the email."></textarea>
                                     </div>
@@ -110,8 +118,6 @@
                         </fieldset>
                     </form>
                 </div>
-            </div>
-            <div class = col-md-2>
             </div>
         </div>
 

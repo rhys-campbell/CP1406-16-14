@@ -423,3 +423,7 @@ button {
 .error {
     color: red;
 }
+
+#comment {
+    min-height: 250px;
+}

@@ -22,11 +22,14 @@
         background-image: none;
     }
 
-}
 
     .callToAction {
-    display: block;
+        display: block;
     }
+}
+
+
+
 
 
 
@@ -91,7 +94,7 @@ body {
 .Above {
     position: absolute;
     z-index: 1;
-    left: 0%;
+    left: 0;
     top: 0;
 }
 
@@ -232,6 +235,10 @@ body {
 li.active {
     float: none;
     display: inline-block;
+}
+
+.hambuger-menu {
+    /*display: none;*/
 }
 
 /*footer*/
@@ -454,3 +461,5 @@ button {
 #comment {
     min-height: 250px;
 }
+
+

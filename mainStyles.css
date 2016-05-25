@@ -26,6 +26,10 @@
     .callToAction {
         display: block;
     }
+
+    .break {
+        display: none;
+    }
 }
 
 

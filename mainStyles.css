@@ -14,13 +14,6 @@
         display: none;
     }
 
-    header {
-        background-color: #ffffff;
-    }
-
-    body {
-        background-image: none;
-    }
 
 
     .callToAction {
@@ -31,11 +24,6 @@
         display: none;
     }
 }
-
-
-
-
-
 
 .callToAction {
     display: block;

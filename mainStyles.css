@@ -1,21 +1,11 @@
 @media (max-width: 1000px) {
     /* For Desktop */
-    .leftEdge {
+    .leftEdge, .rightEdge, .BannerRight, .callToAction  {
 	    display: block;
-	    background-color: #1B242F;
     }
 
-    .rightEdge {
-        display: block;
+    .leftEdge, .rightEdge  {
         background-color: #1B242F;
-    }
-
-    .BannerRight {
-        display: block;
-    }
-
-    .callToAction {
-        display: block;
     }
 
     .break {
@@ -30,7 +20,7 @@
     .col-md-3 {width: 25%;}
     .col-md-4 {width: 33.33%;}
     .col-md-5 {width: 41.66%;}
-    .col-md-6 {width: 50%;}
+    .col-md-6 {width: 100%;}
     .col-md-7 {width: 58.33%;}
     .col-md-8 {width: 66.66%;}
     .col-md-9 {width: 75%;}
@@ -38,22 +28,12 @@
     .col-md-11 {width: 91.66%;}
     .col-md-12 {width: 100%;}
 
-    .leftEdge {
-        display: none;
-        background-color: #1B242F;
-    }
-
-    .rightEdge {
-        display: none;
-        background-color: #1B242F;
-    }
-
-    .BannerRight {
+    .leftEdge, .rightEdge, .BannerRight, .callToAction  {
         display: block;
     }
 
-    .callToAction {
-        display: block;
+    .leftEdge, .rightEdge  {
+        background-color: #1B242F;
     }
 
     .break {
@@ -68,7 +48,7 @@
     .col-md-3 {width: 25%;}
     .col-md-4 {width: 33.33%;}
     .col-md-5 {width: 41.66%;}
-    .col-md-6 {width: 50%;}
+    .col-md-6 {width: 100%;}
     .col-md-7 {width: 58.33%;}
     .col-md-8 {width: 66.66%;}
     .col-md-9 {width: 75%;}
@@ -76,28 +56,50 @@
     .col-md-11 {width: 91.66%;}
     .col-md-12 {width: 100%;}
 
-    .leftEdge {
-        display: none;
-        background-color: #1B242F;
-    }
-
-    .rightEdge {
-        display: none;
-        background-color: #1B242F;
-    }
-
-    .BannerRight {
+    .leftEdge, .rightEdge, .BannerRight, .callToAction  {
         display: block;
     }
 
-    .callToAction {
-        display: block;
+    .leftEdge, .rightEdge  {
+        background-color: #1B242F;
+        display: none;
     }
 
     .break {
         display: none;
     }
+
 }
+
+@media (max-width: 300px){
+    .col-md-1 {width: 8.33%;}
+    .col-md-2 {width: 16.66%;}
+    .col-md-3 {width: 25%;}
+    .col-md-4 {width: 33.33%;}
+    .col-md-5 {width: 41.66%;}
+    .col-md-6 {width: 100%;}
+    .col-md-7 {width: 58.33%;}
+    .col-md-8 {width: 66.66%;}
+    .col-md-9 {width: 75%;}
+    .col-md-10 {width: 83.33%;}
+    .col-md-11 {width: 91.66%;}
+    .col-md-12 {width: 100%;}
+
+    .leftEdge, .rightEdge, .BannerRight, .callToAction  {
+        display: block;
+    }
+
+    .leftEdge, .rightEdge  {
+        background-color: #1B242F;
+        display: none;
+    }
+
+    .break {
+        display: none;
+    }
+
+}
+
 
 .callToAction {
     display: block;
@@ -120,7 +122,6 @@ body {
 
 .content {
     background-color: white;
-    display: block;
 }
 
 

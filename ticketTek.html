@@ -1,12 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">>
 <head>
     <meta charset="UTF-8">
     <title>Pretend Ticket Tek Order</title>
+    <link href="bootstrap.css" rel='stylesheet' type='text/css' />
+    <!-- Custom Theme files -->
+    <link href="mainStyles.css" rel='stylesheet' type='text/css' />
 </head>
 <body>
+<div class = "container-fluid">
+    <div  class = " col-md-3 leftEdge">
+        <!-- This is the left column -->
+    </div>
+    <div  class = "col-md-6 content">
+        <!-- Banner -->
+        <div class="row">
+            <div class="col-md-12 Banner "> <a href="index.html"><img class="BannerLeft" src="images/BannerHeader.jpg" alt="Barrier Reef Orchestra - Townsville"/></a>
+                <a href="index.html"><img class="BannerRight" src="images/BannerRight.png" alt="Our banner extention"/></a>
+            </div>
+
     <h1>Relevant ticket information</h1>
-    <p>Users would be directed to a secure page within an ordering website / a booking service</p>
+    <div class="col-md-6"> Users would be directed to a secure page within an ordering website / a booking service </div>
     <button onclick="goBack()">Go Back</button>
 
     <script>
@@ -14,5 +28,9 @@
             window.history.back();
         }
     </script>
+
+            <div  class = " col-md-3 rightEdge">
+                <!-- This is the right column -->
+            </div>
 </body>
 </html>

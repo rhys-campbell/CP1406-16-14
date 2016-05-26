@@ -191,6 +191,15 @@ h3 {
     color: #000000;
 }
 
+.col-md-4 {
+    text-align: center;
+}
+
+.col-md-4 img {
+    display: block;
+    margin: 0 auto;
+}
+
 /* Calender */
 
 
@@ -524,3 +533,4 @@ button {
 #comment {
     min-height: 250px;
 }
+

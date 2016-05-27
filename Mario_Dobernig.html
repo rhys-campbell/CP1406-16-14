@@ -3,35 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <title>Mario Dobernig</title>
-    <link href="bootstrap.css" rel='stylesheet' type='text/css' />
+    <link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
+    <!-- Calender Theme files -->
+    <!-- <link href="auto-cal.css" rel='stylesheet' type='text/css' />
     <!-- Custom Theme files -->
     <link href="mainStyles.css" rel='stylesheet' type='text/css' />
+    <link href="js/jquery.min.js" rel="script"/>
+    <link href="js/bootstrap.js" rel="script"/>
 </head>
+
 <body>
-<div class = "container-fluid">
-    <div  class = " col-md-3 leftEdge">
+<div class = container-fluid>
+    <div class = " col-md-3 leftEdge">
         <!-- This is the left column -->
     </div>
-    <div  class = "col-md-6 content">
+    <div class = "col-md-6 content">
         <!-- Banner -->
         <div class="row">
-            <div class="col-md-12 Banner"> <a href="index.html"><img class="BannerLeft" src="images/BannerHeader.jpg" alt="Barrier Reef Orchestra - Townsville"/></a>
-                <a href="index.html"><img class="BannerRight" src="images/BannerRight.png" alt="Our banner extention"/></a>
+            <div class="col-md-12 ">
+                <a href="index.html"><img class="Banner " src="images/BannerHeader.jpg" alt="Barrier Reef Orchestra - Townsville"/></a>
             </div>
         </div>
+
         <!--Navigation Bar-->
-        <div class="row">
+        <div class="row nav">
             <div class="col-md-12">
                 <ul class="nav nav-pills">
                     <li role="presentation" class="active"><a class = "hvr-grow" href="news.html">News</a></li>
                     <li role="presentation" class="active"><a class = "hvr-grow" href="events.html">Events</a></li>
                     <li role="presentation" class="active"><a class = "hvr-grow" href="people.html">People</a></li>
                     <li role="presentation" class="active"><a class = "hvr-grow" href="donate.html">Donations</a></li>
+                    <li role="presentation" class="active"><a class = "hvr-grow" href="member.html">Become a member</a></li>
                     <li role="presentation" class="active"><a class = "hvr-grow" href="join.html">Join the Orchestra</a></li>
                     <li role="presentation" class="active"><a class = "hvr-grow" href="gallery.html">Photo Gallery</a></li>
                     <li role="presentation" class="active"><a class = "hvr-grow" href="about.html">About Us</a></li>
                     <li role="presentation" class="active"><a class = "hvr-grow" href="contact.html">Contact Us</a></li>
                 </ul>
+            </div>
+        </div>
+        <div class = "row">
+            <div class="container hambuger-menu">
+                <div class="dropdown">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="hamburger-Menu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        <span class="glyphicon glyphicon-menu-hamburger"></span>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="hamburger-Menu">
+                        <li><a href="news.html">News</a></li>
+                        <li><a href="events.html">Events</a></li>
+                        <li><a href="people.html">People</a></li>
+                        <li><a href="donate.html">Donations</a></li>
+                        <li><a href="member.html">Become a member</a></li>
+                        <li><a href="join.html">Join the Orchestra</a></li>
+                        <li><a href="gallery.html">Photo Gallery</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
         <!--Breadcrumbs-->
@@ -81,15 +108,17 @@
             <div class="row ">
                 <div class=" col-md-6 ">
                     <ul class="bottom-nav">
-                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html ">Home</a></li>
                         <li><a href="news.html">News</a></li>
                         <li><a href="events.html">Events</a></li>
                         <li><a href="people.html">People</a></li>
+                        <li><a href="donate.html">Donate</a></li>
                     </ul>
                 </div>
                 <div class=" col-md-6 ">
                     <ul class="bottom-nav">
-                        <li><a href="donate.html">Become a Member</a></li>
+                        <li><a href="join.html">Join the Orchestra</a></li>
+                        <li><a href="member.html">Become a Member</a></li>
                         <li><a href="gallery.html">Photo Gallery</a></li>
                         <li><a href="about.html">About Us</a></li>
                         <li><a href="contact.html">Contact Us</a></li>
@@ -101,12 +130,16 @@
                 <div class=" col-md-6 ">
                     <p> © Copyright 2016 Barrier Reef Orchestra. All rights reserved. </p>
                 </div>
-                <div class=" col-md-6 "><a href="#" id="PageTop">Return to Top</a></div>
+                <div class=" col-md-6"><a href="#" id="PageTop">Return to Top</a></div>
+            </div>
+
+            <div class = "col-md-3 rightEdge">
+                <!-- This is the right column -->
+
             </div>
         </div>
-    </div>
-    <div  class = " col-md-3 rightEdge">
-        <!-- This is the right column -->
+        <script src="js/jquery.min.js"></script>
+        <script src="js/bootstrap.js"></script>
     </div>
 </div>
 </body>

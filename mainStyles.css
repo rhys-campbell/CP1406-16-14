@@ -274,12 +274,11 @@ html, body {
 body {
     padding: 10px;
 
-    /*
-    background-image: url("elkhorn-coral-589407.jpg");
+    background-image: url("images/background2.jpg");
     background-position: bottom;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    */
+
 }
 
 /* Biography page specific */

@@ -48,101 +48,105 @@
         <div class="row">
             <div class="col-md-12">
                 <h1>Join the Orchestra</h1>
-                <p>If you are an aspiring musician or any age and are looking to join an orchestra then The Barrier Reef Orchestra might have a place for you! We are always looking for new musicians who share our same love and passion of music. If you would like to join simply fill out the information below and leave us a message with what instrument you play and a little information about yourself. </p>
+                <p>If you are an aspiring musician or any age and are looking to join an orchestra then The Barrier Reef Orchestra might have a place for you!</p>
+                <p>We are always looking for new musicians who share our same love and passion of music. If you would like to join simply fill out the information below and leave us a message with what instrument you play and a little information about yourself. </p>
                 <div class="container-fluid">
-                    <form class="well form-horizontal" action=" " method="post" id="member_form">
-                        <fieldset>
-                            <!--Form Title-->
-                            <legend>Join the Orchestra Today!</legend>
+                    <div class = col-md-12>
+                        <form class="well form-horizontal" action="" onsubmit="return validate()"  method="post">
+                            <fieldset>
+                                <!-- Form Name -->
+                                <legend>Send us an email!</legend>
+                                <!--First Name-->
+                                <div class="form-group">
+                                    <div class="col-md-12 inputGroupContainer">
+                                        <div class = "col-md-2"></div>
+                                        <div class = "col-md-2">
+                                            <label for="first_name">First name:</label>
+                                        </div>
+                                        <div class = "col-md-5 input-group">
 
-                            <!--First Name-->
-                            <div class="form-group">
-                                <label class="col-md-4 control-label">
-                                    First Name:
-                                </label>
-                                <div class="col-md-6 inputGroupContainer">
-                                    <div class="input-group">
-                                        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                                        <input type="text" name="first_name" placeholder= "First Name" class="form-control">
+                                            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                                            <input type="text" name="first_name" placeholder="First Name" id="first_name" required data-required-message="We need you to enter your first name!">
+                                        </div>
+                                        <div class=" col-md-3"></div>
                                     </div>
                                 </div>
-                            </div>
-                            
-                            <!--Last Name-->
-                            <div class="form-group">
-                                <label class="col-md-4 control-label">
-                                    Last Name:
-                                </label>
-                                <div class="col-md-6 inputGroupContainer">
-                                    <div class="input-group">
-                                        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                                        <input type="text" name="last_name" placeholder= "Last Name" class="form-control">
+                                <div class="form-group">
+                                    <div class="col-md-12 inputGroupContainer">
+                                        <div class = "col-md-2"></div>
+                                        <div class ="col-md-2">
+                                            <label for="last_name">Last name:</label>
+                                        </div>
+                                        <div class="col-md-5 input-group">
+                                            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                                            <input type="text" name="last_name" placeholder="Last Name" id="last_name" required data-required-message="We need you to enter your last name!">
+                                        </div>
+                                        <div class="col-md-3"></div>
                                     </div>
                                 </div>
-                            </div>
+                                <div class="form-group">
+                                    <div class="col-md-12 inputGroupContainer">
+                                        <div class = "col-md-2"></div>
+                                        <div class ="col-md-2">
+                                            <label for="phone_number">Phone number:</label>
+                                        </div>
+                                        <div class="col-md-5 input-group">
+                                            <span class="input-group-addon"><i class="glyphicon glyphicon-phone"></i></span>
+                                            <input type="text" name="phone_number" placeholder="Primary contact number" id="phone_number" required data-required-message="We need you to enter a contact number">
+                                        </div>
+                                        <div class="col-md-3"></div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-md-12 inputGroupContainer">
+                                        <div class = "col-md-2"></div>
+                                        <div class ="col-md-2">
+                                            <label for="instrument">Instrument of choice:</label>
+                                        </div>
+                                        <div class="col-md-5 input-group">
+                                            <span class="input-group-addon"><i class="glyphicon glyphicon-music"></i></span>
+                                            <input type="text" name="instrument" placeholder="Instrument of choice" id="instrument" required data-required-message="We need you to enter your instrument of choice!">
+                                        </div>
+                                        <div class="col-md-3"></div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-md-12 inputGroupContainer">
+                                        <div class = "col-md-2"></div>
+                                        <div class = "col-md-2">
+                                            <label for="email">Email:</label>
+                                        </div>
+                                        <div class="col-md-5 input-group">
+                                            <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+                                            <input type="email" name="email" placeholder="Your contact email" id="email" required data-required-message="Email is required." data-type-message="We need you to enter your email address!">
+                                        </div>
+                                        <div class = "col-md-3"></div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-md-12 inputGroupContainer">
+                                        <div class="col-md-2"></div>
+                                        <div class = "col-md-2">
+                                            <label for="about_you">Tell us about you:</label>
+                                        </div>
+                                        <div class="col-md-5 input-group">
 
-                            <!--Email-->
-                            <div class="form-group">
-                                <label class="col-md-4 control-label">
-                                    Email Address:
-                                </label>
-                                <div class="col-md-6 inputGroupContainer">
-                                    <div class="input-group">
-                                        <span class="input-group-addon"><i class="glyphicon glyphicon-inbox"></i></span>
-                                        <input type="email" name="email" placeholder="Email Address" class="form-control">
+                                            <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
+                                            <textarea class="form-control" name="about_you" id="about_you" placeholder="For us to read! - Optional"></textarea>
+                                        </div>
+                                        <div class="col-md-3"></div>
                                     </div>
                                 </div>
-                            </div>
+                                <div class="form-group">
+                                    <label class="col-md-4 control-label"></label>
+                                    <div class="col-md-4">
+                                        <input type="submit" class="btn btn-primary">
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </form>
+                    </div>
 
-                            <!--Phone-->
-                            <div class="form-group">
-                                <label class="col-md-4 control-label">
-                                    Phone:
-                                </label>
-                                <div class="col-md-6 inputGroupContainer">
-                                    <div class="input-group">
-                                        <span class="input-group-addon"><i class="glyphicon glyphicon-phone"></i></span>
-                                        <input type="tel" name="phone" placeholder="Phone Number" class="form-control">
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <!--Instrument-->
-                            <div class="form-group">
-                                <label class="col-md-4 control-label">
-                                    The Instrument You Play:
-                                </label>
-                                <div class="col-md-6 inputGroupContainer">
-                                    <div class="input-group">
-                                        <span class="input-group-addon"><i class="glyphicon glyphicon-music"></i></span>
-                                        <input type="text" name="instrument" placeholder="Instrument" class="form-control">
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <!--About Yourself-->
-                            <div class="form-group">
-                                <label class="col-md-4 control-label">
-                                    About Yourself:
-                                </label>
-                                <div class="col-md-8 inputGroupContainer">
-                                    <div class="input-group">
-                                        <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
-                                        <textarea class="form-control" name="comment" id="comment" placeholder="Tell Us about Yourself!"></textarea>
-                                    </div>
-                                </div>
-                            </div>
-                            
-
-                            <!--Submit Button -->
-                            <div class="form-group">
-                                <label class="col-md-4 control-label"></label>
-                                <div class="col-md-4">
-                                    <button type="submit" class="btn btn-primary">Join Now!</button>
-                                </div>
-                            </div>
-                        </fieldset>
-                    </form>
                 </div>
             </div>
         </div>
@@ -177,5 +181,8 @@
         </div>
     </div>
 </div>
+<script src="js/validate.js"></script>
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.js"></script>
 </body>
 </html>

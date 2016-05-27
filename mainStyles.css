@@ -11,6 +11,7 @@
     .break {
         display: none;
     }
+
 }
 
 @media (max-width: 600px) {
@@ -71,6 +72,8 @@
 
 }
 
+}
+
 @media (max-width: 300px){
     .col-md-1 {width: 8.33%;}
     .col-md-2 {width: 16.66%;}
@@ -97,9 +100,18 @@
     .break {
         display: none;
     }
-
 }
 
+@media (min-width:481px) {
+    .hambuger-menu {
+        display:none;
+    }
+}
+@media (max-width:480px) {
+    .nav-pills, .nav {
+        display:none;
+    }
+}
 
 .callToAction {
     display: block;
@@ -203,85 +215,11 @@ h3 {
     margin: 0 auto;
 }
 
-/* Calender */
-
-
-* {
-    margin: 0;
-    padding: 0;
-}
-
-
-
-
-#calendar {
-    background: #e4e0e7;
-    box-shadow: 0 0 20px #878787;
-    height: 208px;
-    margin: 20px auto;
-    position: relative;
-    text-align: center;
-    width: 216px;
-}
-
-#month {
-    background: linear-gradient(#7b80de, #4a43c6);
-    color: white;
-    height: 30px;
-    line-height: 30px;
-    text-shadow: 0 -1px 0 #878787;
-    width: 216px;
-}
-
-#days {
-    background: linear-gradient(#f4f4f4, #ebebeb);
-}
-
-table.days {
-    color: #888888;
-    font-size: 11px;
-    width: 216px;
-}
-
-table.day td, table.days td {
-    width: 30px;
-}
-
-table.day td {
-    background: #f4f0f7;
-    color: #878787;
-    height: 29px;
-    box-shadow: 0 -1px 0 white;
-}
-
-table.day td.old-month {
-    color: #aaaaaa;
-}
-
-
-table.day #event {
-    border-bottom: 2px solid #99ccff;
-}
-
-#seven {
-    display: none;
-}
-
 html, body {
     height: 100%; width: 100%;
     padding: 0; margin: 0;
 }
 
-
-body {
-    padding: 10px;
-
-    background-image: url("images/background2.jpg");
-    background-position: bottom;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-
-}
 
 
 

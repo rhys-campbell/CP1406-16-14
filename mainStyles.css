@@ -524,8 +524,7 @@ button {
     padding: 0.2em;
 }
 .invalid {
-    background: red;
-    color: white;
+    color: black;
 }
 .error {
     color: red;

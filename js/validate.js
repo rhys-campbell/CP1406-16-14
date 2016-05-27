@@ -20,6 +20,7 @@ function validate() {
     }
 }
 
+
 var form = document.querySelector( "form" ),
     inputs = form.querySelectorAll( "input" );
     textareas = form.querySelectorAll("textarea");

@@ -44,27 +44,58 @@
             </div>
         </div>
 
-        <!--Page Content-->
         <div class="row">
-            <div class="col-md-12">
-                <h1>Make A Donation</h1>
-                <p>With a philanthropic gift of $200 or more (we'll leave that up to you), you can become an Orchestra Benefactor and be placed on our Benefactor roll for twelve months. This roll will be published in each concert program and on our website for twelve months. As a Benefactor you will also receive two free tickets to our next concert, be placed on the mailing list for our newsletter, and will be a guest at our annual Season's Launch function. Please complete the details below and mail to PO Box 576 Townsville 4810, make cheques payable to North Queensland Ensembles Inc. or you can fill out the below form, and pay by direct debit to BSB 034 222, Account No. 173922. Donations are tax deductible. For more information contact Simon McConnell on 0418776961 or email mcconnellgray@optusnet.com.au. Your support of the Orchestra will be greatly appreciated.</p>
-                <div class="container-fluid">
-                    <form class="well form-horizontal" action=" " method="post" id="member_form">
+            <div class="container-fluid">
+                <div class = col-md-12>
+                    <h1>Make A Donation</h1>
+                    <p>With a philanthropic gift of $200 or more (we'll leave that up to you), you can become an Orchestra Benefactor and be placed on our Benefactor roll for twelve months. This roll will be published in each concert program. As a Benefactor you will also receive two free tickets to our next concert, be placed on the mailing list for our newsletter, and will be a guest at our annual Season's Launch function. </p>
+                    <p>Please complete the details below and mail to PO Box 576 Townsville 4810, make cheques payable to North Queensland Ensembles Inc. or you can fill out the below form, and pay by direct debit to BSB 034 222, Account No. 173922. Donations are tax deductible. For more information contact Simon McConnell on 0418776961 or email mcconnellgray@optusnet.com.au. Your support of the Orchestra will be greatly appreciated.</p>
+                    <form class="well form-horizontal" action="" onsubmit="return validate()"  method="post">
                         <fieldset>
-                            <!--Form Title-->
-                            <legend>Become a Member Today!</legend>
+                            <!-- Form Name -->
+                            <legend>Support our cause with a donation today!</legend>
+                            <!--First Name-->
+                            <div class="form-group">
+                                <div class="col-md-12 inputGroupContainer">
+                                    <div class = "col-md-2"></div>
+                                    <div class = "col-md-2">
+                                        <label for="first_name">First name:</label>
+                                    </div>
+                                    <div class = "col-md-5 input-group">
+                                        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                                        <input type="text" name="first_name" placeholder="First Name" id="first_name" required data-required-message="We need you to enter your first name!">
+                                    </div>
+                                    <div class=" col-md-3"></div>
+                                </div>
+                            </div>
+                            <!--Second Name-->
+                            <div class="form-group">
+                                <div class="col-md-12 inputGroupContainer">
+                                    <div class="col-md-2"></div>
+                                    <div class = "col-md-2">
+                                        <label for="last_name">Last name:</label>
+                                    </div>
+                                    <div class="col-md-5 input-group">
+                                        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                                        <input type="text" name="last_name" placeholder="Last Name" id="last_name" required data-required-message="We need you to enter your last name!">
+                                    </div>
+                                    <div class="col-md-3"></div>
+                                </div>
+                            </div>
 
                             <!--Payment Amount-->
                             <div class="form-group">
-                                <label class="col-md-4 control-label">
-                                    Contribution:
-                                </label>
-                                <div class="col-md-6 inputGroupContainer">
-                                    <div class="input-group">
-                                        <span class="input-group-addon"><i class="glyphicon glyphicon-usd"></i></span>
-                                        <input name="amount" class="form-control" type="number">
+                                <div class="col-md-12 inputGroupContainer">
+                                    <div class = "col-md-2"></div>
+                                    <div class = "col-md-2">
+                                        <label for="contribution">Contribution:</label>
                                     </div>
+
+                                    <div class="col-md-5 inputGroupContainer">
+                                        <span class="input-group-addon"><i class="glyphicon glyphicon-usd"></i></span>
+                                        <input name="contribution" type="number"  id="contribution" placeholder="Any amount is appreciated" required data-required-message="Please enter an emount you would like to donate">
+                                    </div>
+                                    <div class="col-md-3"></div>
                                 </div>
                             </div>
 
@@ -75,70 +106,59 @@
                                 </label>
                                 <div class="col-md-6 inputGroupContainer">
                                     <div class="input-group row">
-                                        <label class=" col-md-4"><input class="radio-inline" type="radio" name="payment" value="cheque">Cheque</label>
-                                        <label class=" col-md-4"><input class="radio-inline" type="radio" name="payment" value="EFTPOS">Eftpos</label>
-                                        <label class=" col-md-4"><input class = "radio-inline" type="radio" name="payment" value="cash">Cash</label>
+                                        <label class=" col-md-6"><input class="radio-inline" type="radio" name="payment" value="EFTPOS">Credit card</label>
+                                        <label class=" col-md-6"><input class = "radio-inline" type="radio" name="payment" value="cash">Paypal</label>
                                     </div>
                                 </div>
                             </div>
 
-                            <!--Name-->
+
                             <div class="form-group">
-                                <label class="col-md-4 control-label">
-                                    Full Name:
-                                </label>
-                                <div class="col-md-6 inputGroupContainer">
-                                    <div class="input-group">
+                                <div class="col-md-12 inputGroupContainer">
+                                    <div class="col-md-2"></div>
+                                    <div class = "col-md-2">
+                                        <label for="contact_number">Contact number:</label>
+                                    </div>
+                                    <div class="col-md-5 input-group">
                                         <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                                        <input type="text" name="name" class="form-control">
+                                        <input type="number" name="contact_number" placeholder="A number we can thank you on - optional" id="contact_number">
                                     </div>
+                                    <div class="col-md-3"></div>
                                 </div>
                             </div>
 
-                            <!--Mailing Address-->
+
                             <div class="form-group">
-                                <label class="col-md-4 control-label">
-                                    Mailing Address:
-                                </label>
-                                <div class="col-md-6 inputGroupContainer">
-                                    <div class="input-group">
+                                <div class="col-md-12 inputGroupContainer">
+                                    <div class = "col-md-2"></div>
+                                    <div class = "col-md-2">
+                                        <label for="email">Email:</label>
+                                    </div>
+                                    <div class="col-md-5 input-group">
                                         <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
-                                        <input type="text" name="address" class="form-control">
+                                        <input type="email" name="email" placeholder="Your contact email" id="email" required data-required-message="Email is required." data-type-message="We need you to enter your email address!">
                                     </div>
+                                    <div class = "col-md-3"></div>
                                 </div>
                             </div>
-
-                            <!--Email-->
                             <div class="form-group">
-                                <label class="col-md-4 control-label">
-                                    Email Address:
-                                </label>
-                                <div class="col-md-6 inputGroupContainer">
-                                    <div class="input-group">
-                                        <span class="input-group-addon"><i class="glyphicon glyphicon-inbox"></i></span>
-                                        <input type="email" name="email" class="form-control">
+                                <div class="col-md-12 inputGroupContainer">
+                                    <div class="col-md-2"></div>
+                                    <div class = "col-md-2">
+                                        <label for="comment">Leave us a message:</label>
                                     </div>
+                                    <div class="col-md-5 input-group">
+
+                                        <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
+                                        <textarea class="form-control" name="comment" id="comment" placeholder="For us to read!"  required data-required-message="A comment is required." data-type-message="We need you to enter something to be sent in the email!"></textarea>
+                                    </div>
+                                    <div class="col-md-3"></div>
                                 </div>
                             </div>
-
-                            <!--Phone-->
-                            <div class="form-group">
-                                <label class="col-md-4 control-label">
-                                    Phone:
-                                </label>
-                                <div class="col-md-6 inputGroupContainer">
-                                    <div class="input-group">
-                                        <span class="input-group-addon"><i class="glyphicon glyphicon-phone"></i></span>
-                                        <input type="tel" name="phone" class="form-control">
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!--Submit Button -->
                             <div class="form-group">
                                 <label class="col-md-4 control-label"></label>
                                 <div class="col-md-4">
-                                    <button type="submit" class="btn btn-primary">Send <span class="glyphicon glyphicon-send"></span></button>
+                                    <input type="submit" class="btn btn-primary">
                                 </div>
                             </div>
                         </fieldset>
@@ -177,5 +197,11 @@
         </div>
     </div>
 </div>
+
+<script src="js/validate.js"></script>
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.js"></script>
+
+
 </body>
 </html>
